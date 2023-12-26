@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  main.max-w-5xl.h-full.mx-auto.flex.flex-col
+    if user
+      div
+        h1.text-xl.mb-4 Welcome back, #[strong= user.displayName]
+
+        a.font-bold.inline-flex.items-center.gap-2.bg-blue-700.text-white.py-2.px-3.rounded-md(href="/message/new") #[i.fa.fa-plus(aria-hidden='true')] New message
+
+
+    h1.text-3xl.border-b.py-3.my-4.font-bold.text-center Developers Posts
+
+    if !isMember
+      p.mb-2.text-center.text-gray-400 Note: You must be a member to view the post's author and date of creation.
+
+
+    .bg-neutral-100.grow
+      table.w-full
+        tbody
+          each message in messages
+            tr.bg-neutral-200(class="even:bg-neutral-300")
+              td.pl-4.py-4
+                a.text-blue-700.transition.duration-200.grow(class="md:text-lg" href=message.url class="hover:text-blue-700")=message.title
+
+              td.pr-4.py-4
+                .text-sm
+                  if user && user.membershipStatus !== 'none'
+                    p(title=message.createdAt)=message.formattedDate
+
+                    if user.id === message.author.id 
+                      p by #[span.text-blue-700 You]
+                    else 
+                      p by #[span.text-blue-700 #{message.author.displayName} (@#{message.author.username})]
+                  else
+                    p Date: xXxXx
+                    p Post by: XxXxXxX
+
+                if user && user.membershipStatus === 'admin'
+                  a.pt-3.text-red-600(href=message.url + '/delete') Delete

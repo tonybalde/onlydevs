@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  article.max-w-5xl.h-full.mx-auto.flex.flex-col
+    header.my-5
+
+      if isMember
+        img.w-8.h-8.rounded-full(src=message.author.pfpUrl || '/images/default-pfp.png' alt="")
+
+      p
+        | Post by #[span.text-blue-700=isMember ? `${message.author.displayName} (@${message.author.username})` : "█████"]
+        if isMember
+          span.text-gray-400  · #{message.formattedDate}
+
+    h1.text-3xl.font-bold.mb-4=message.title
+    p.font-serif.text-lg= message.text
+
