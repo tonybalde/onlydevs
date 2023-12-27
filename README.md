@@ -1,6 +1,6 @@
 # Only.Devs (an only member app for devs)
 
-### You can visit the live project at::
+### You can visit the live project at: [https://onlydevs.adaptable.app/](https://onlydevs.adaptable.app/)
 
 ![](assets/screenshots/01-main.png)
 
