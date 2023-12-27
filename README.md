@@ -32,4 +32,4 @@
 
 # CREDTIS:
 
-### I took this repo: https://github.com/Sharkri/members-only/tree/main and made some minor changes, like colors, icons and default image profile.
+### I took this repo: https://github.com/Sharkri/members-only/tree/main and made some minor changes, like colors, icons and default image profile but I learnt a lot in my first attempt building this project, but I got stuck for a while and then I decided to look the repo above and make it work. So thanks again!

@@ -45,8 +45,9 @@ app.use(flash());
 app.use(
   session({
     secret: process.env.secret,
-    resave: false,
+    resave: true,
     saveUninitialized: true,
+    cookie: { secure: false },
   })
 );
 app.use(passport.initialize());
