@@ -11,6 +11,7 @@
 ![](assets/screenshots/02-create-a-new-user-signup-responsive.png)
 
 ## Afer filling all the fields and clicking on Sign Up, if the registration is successful you will be redirected to the login form
+You can login with the test account, username: "test" and password: "test1234"
 
 ![](assets/screenshots/03-login.png)
 
