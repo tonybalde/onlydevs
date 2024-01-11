@@ -30,7 +30,3 @@ You can login with the test account, username: "test" and password: "test1234"
 ## Finally, when you are an Admin, you will be able to delete the messages. Be responsible =)
 
 ![](assets/screenshots/07-admin.png)
-
-# CREDTIS:
-
-### I took this repo: https://github.com/Sharkri/members-only/tree/main and made some minor changes, like colors, icons and default image profile but I learnt a lot in my first attempt building this project, but I got stuck for a while and then I decided to look the repo above and make it work. So thanks again!
