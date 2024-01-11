@@ -5,6 +5,12 @@ include mixins/inputField
 block content
   .max-w-sm.mx-auto
     h1.text-2xl.font-bold.mb-3.border-b.pb-4.text-center(class="border-b-blue-700/70")= title
+    p.text-md.pb-4
+      | You can login with the username: "
+      strong test
+      | " and the password: "
+      strong test1234
+      | "
 
     form.flex.flex-col.gap-6(action="/login" method="post")
       +inputField('Username')(value=username name="username" type="text" maxlength="25" required autocomplete="nickname")
